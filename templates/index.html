@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Stock Backtester</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        form {
+            margin: 30px auto;
+            width: 300px;
+        }
+        input[type="text"], input[type="date"], input[type="number"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            box-sizing: border-box;
+        }
+        input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <h2>Stock Backtester</h2>
+    <form action="/backtest" method="post">
+        <label for="start_date">Start Date:</label><br>
+        <input type="date" id="start_date" name="start_date" required><br>
+        <label for="end_date">End Date:</label><br>
+        <input type="date" id="end_date" name="end_date" required><br>
+        <label for="stake">Amount Invested per Trade:</label><br>
+        <input type="number" id="stake" name="stake" required><br>
+        <label for="stocks">Stocks (comma-separated):</label><br>
+        <input type="text" id="stocks" name="stocks" required><br>
+        <input type="submit" value="Backtest">
+    </form>
+</body>
+</html>

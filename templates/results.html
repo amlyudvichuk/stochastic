@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Stock Backtest Results</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 15px;
+        }
+        th {
+            background-color: #4CAF50;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h2>Stock Backtest Results</h2>
+    <table>
+        <tr>
+            <th>Stock</th>
+            <th>Long Value</th>
+            <th>Short Value</th>
+        </tr>
+        {% for stock, result in results.items() %}
+        <tr>
+            <td>{{ stock }}</td>
+            <td>{{ result['long_value'] }}</td>
+            <td>{{ result['short_value'] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+<a href="/download" class="btn btn-primary">Download Trade History</a>
+</body>
+</html>

@@ -1,0 +1,6 @@
+runtime: python
+vm: true
+entrypoint: gunicorn -b :PORT application:app
+
+runtime config:
+  python version: 3
